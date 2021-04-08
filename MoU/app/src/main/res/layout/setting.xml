@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/help_lay">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="16dp"
+            android:text="back"
+            android:layout_margin="10dp"
+            android:onClick="back_clicked"
+            />
+
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="300dp"
+            android:id="@+id/pic_logo"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:scaleType="fitCenter"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ID_lay"
+            android:layout_below="@+id/pic_logo"
+            android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:text="ID : "
+            android:layout_margin="10dp"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/m_ID"
+            android:background="#2F006FFF"
+            android:text=""
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/text1"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logout"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ID_lay"
+            android:background="#FFFFFF00"
+            android:text="LOGOUT"
+            android:textSize="16dp"
+            android:layout_margin="20dp"
+            android:onClick="logout_clicked"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/help"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/logout"
+            android:background="#FFFFFF00"
+            android:text="HELP"
+            android:layout_margin="20dp"
+            android:textSize="16dp"
+            android:onClick="help_clicked"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/help_view"
+        android:src="@drawable/help_background1"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:id="@+id/help_next"
+        android:onClick="help_next_clicked"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="#00FFFFFF"
+        android:src="@drawable/arrow_right"/>
+
+</RelativeLayout>

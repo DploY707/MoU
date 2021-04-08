@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/main_logo"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"/>
+
+    <LinearLayout
+        android:id="@+id/frag_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="20" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="60"
+            android:background="@drawable/empty_button">
+
+            <TextView
+                android:text="ID : "
+                android:textColor="#FF37ABE3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/id_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"/>
+
+    <LinearLayout
+        android:id="@+id/frag_pw"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="30"/>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="60"
+            android:background="@drawable/empty_button">
+
+            <TextView
+                android:text="PW : "
+                android:textColor="#FF37ABE3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/pw_edit" />
+
+            <EditText
+                android:id="@+id/pw_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:password="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:text="Login"
+        android:textColor="#FFFFFFFF"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:onClick="login_clicked"
+        android:layout_gravity="center"
+        android:layout_weight="10"
+        android:background="@drawable/filled_button" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#FFB6B6B6"
+        android:layout_weight="10"
+        android:layout_below="@+id/loginButton" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="10">
+
+        <Button
+            android:id="@+id/signIn"
+            android:text="SIGN IN"
+            android:textColor="#FFFFFFFF"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/filled_button"
+            android:onClick="sign_clicked" />
+
+        <Button
+            android:id="@+id/button2"
+            android:text="find id / PW"
+            android:textColor="#FFFFFFFF"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:onClick="find_clicked"
+            android:background="@drawable/filled_button"
+            android:layout_margin="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

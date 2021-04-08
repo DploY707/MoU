@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "732588570763",
+    "project_id": "map-of-us"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732588570763:android:ae2ec0edbaab3fa7",
+        "android_client_info": {
+          "package_name": "raydom.use_map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732588570763-kfgal89norbtiqqd0oe8vflphuqrre3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "raydom.use_map",
+            "certificate_hash": "b9785a450b1c946466e28d9cdaeaecb696b9f1d7"
+          }
+        },
+        {
+          "client_id": "732588570763-inehgsb3jq6ut8lnbupoltem8va2njtr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzK73qOJfFNpeYdbAx5js-eEtMDMtCLXc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

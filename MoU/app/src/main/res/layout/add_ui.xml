@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="Adding Sequence"
+        android:id="@+id/m_title"
+        android:background="#00000000"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/m_title"
+        android:textSize="20dp"
+        android:text="Which category do you want to add?"
+        android:id="@+id/category_Q"
+        android:layout_marginTop="40dp"
+        android:layout_margin="20dp"/>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/toilet_add"
+        android:layout_below="@+id/category_Q"
+        android:src="@drawable/final_toilet"
+        android:onClick="toilet_add_clicked"
+        android:background="#00FFFFFF"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/toilet_add_check"
+        android:layout_below="@+id/category_Q"
+        android:src="@drawable/check"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/wifi_add"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@+id/toilet_add"
+        android:src="@drawable/final_wifi"
+        android:onClick="wifi_add_clicked"
+        android:background="#00FFFFFF"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/wifi_add_check"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@+id/toilet_add"
+        android:src="@drawable/check"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/smoke_add"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@id/wifi_add"
+        android:src="@drawable/final_smoking"
+        android:onClick="smoke_add_clicked"
+        android:background="#00FFFFFF"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/smoke_add_check"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@id/wifi_add"
+        android:src="@drawable/check"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/landmark_add"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@id/smoke_add"
+        android:onClick="landmark_add_clicked"
+        android:background="#00FFFFFF"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:src="@drawable/final_landmark"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/landmark_add_check"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@id/smoke_add"
+        android:src="@drawable/check"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/trash_add"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@id/landmark_add"
+        android:onClick="trash_add_clicked"
+        android:background="#00FFFFFF"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:src="@drawable/trash_bin"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/trash_add_check"
+        android:layout_below="@+id/category_Q"
+        android:layout_toRightOf="@id/landmark_add"
+        android:src="@drawable/check"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text=".\n.\n."
+        android:id="@+id/skip"
+        android:layout_below="@+id/landmark_add"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- toilet setting -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/setting_toilet"
+        android:layout_below="@id/toilet_add"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toilet_name"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="NAME : "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/toilet_name_edit"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/toilet_name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toilet_name"
+            android:id="@+id/text_disabled"
+            android:textSize="20dp"
+            android:text="FOR DISABLED :  "
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_disabled"
+            android:orientation="horizontal"
+            android:layout_below="@+id/toilet_name"
+            android:layout_toRightOf="@+id/text_disabled">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/disabled_b_exist"
+                android:textSize="20dp"
+                android:text="EXIST"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:id = "@+id/disabled_b_notexist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toilet_name"
+                android:layout_toRightOf="@+id/disabled_b_exist"
+                android:textSize="20dp"
+                android:text="NOT EXIST"
+                android:layout_margin="10dp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_disabled"
+            android:id="@+id/text_unisex"
+            android:textSize="20dp"
+            android:text="FOR UNISEX :  "
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/check_unisex"
+            android:layout_below="@+id/text_disabled"
+            android:layout_toRightOf="@+id/text_unisex">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/unisex_b_yes"
+                android:textSize="20dp"
+                android:text="YES"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_disabled"
+                android:layout_toRightOf="@+id/unisex_b_yes"
+                android:textSize="20dp"
+                android:text="NO"
+                android:layout_margin="10dp"/>
+
+        </RadioGroup>
+
+        <ImageButton
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/pic_toilet_button"
+            android:layout_below="@+id/check_unisex"
+            android:layout_margin="20dp"
+            android:src="@drawable/no_image"
+            android:scaleType="fitCenter"
+            android:onClick="pic_tb_clicked"/>
+
+    </RelativeLayout>
+
+    <!-- wifi setting -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/setting_wifi"
+        android:layout_below="@id/wifi_add"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wifi_name"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="NAME : "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/wifi_name_edit"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/wifi_name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wifi_name"
+            android:id="@+id/text_agency"
+            android:textSize="20dp"
+            android:text="AGENCY : "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/agency_edit"
+            android:layout_below="@+id/wifi_name"
+            android:layout_toRightOf="@+id/text_agency"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_agency"
+            android:id="@+id/text_loc"
+            android:textSize="20dp"
+            android:text="LOCKED :  "
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/check_locked"
+            android:layout_below="@+id/text_agency"
+            android:layout_toRightOf="@+id/text_loc">
+
+            <RadioButton
+                android:id="@+id/loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="LOCKED"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="UNLOCKED"
+                android:layout_margin="10dp"/>
+
+        </RadioGroup>
+
+        <ImageButton
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/pic_wifi_button"
+            android:layout_below="@+id/check_locked"
+            android:layout_margin="20dp"
+            android:src="@drawable/no_image"
+            android:scaleType="fitCenter"
+            android:onClick="pic_wb_clicked"/>
+
+    </RelativeLayout>
+
+    <!-- smoke setting-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/setting_smoke"
+        android:layout_below="@id/toilet_add"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/smoke_name"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="NAME : "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/smoke_name_edit"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/smoke_name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/smoke_name"
+            android:id="@+id/text_ashtray"
+            android:textSize="20dp"
+            android:text="ASYTRAY :  "
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:id = "@+id/ashtray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/smoke_name"
+            android:layout_toRightOf="@+id/text_ashtray">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ashtray_b_exist"
+                android:textSize="20dp"
+                android:text="EXIST"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wifi_name"
+                android:layout_toRightOf="@+id/ashtray_b_exist"
+                android:textSize="20dp"
+                android:text="NOT EXIST"
+                android:layout_margin="10dp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_ashtray"
+            android:id="@+id/text_booth"
+            android:textSize="20dp"
+            android:text="BOOTH :  "
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/Booth_group"
+            android:layout_below="@+id/text_ashtray"
+            android:layout_toRightOf="@+id/text_booth">
+
+            <RadioButton
+                android:id="@+id/exist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="EXIST"
+                android:layout_margin="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_agency"
+                android:layout_toRightOf="@+id/unlocked_b_yes"
+                android:textSize="20dp"
+                android:text="NOT_EXIST"
+                android:layout_margin="10dp"/>
+
+        </RadioGroup>
+
+        <ImageButton
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/pic_smoke_button"
+            android:layout_below="@+id/Booth_group"
+            android:layout_margin="20dp"
+            android:src="@drawable/no_image"
+            android:scaleType="fitCenter"
+            android:onClick="pic_sb_clicked"/>
+
+    </RelativeLayout>
+
+    <!-- landmark setting-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/setting_landmark"
+        android:layout_below="@id/toilet_add"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/landmark_name"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="NAME : "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/landmark_name_edit"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/landmark_name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/landmark_name"
+            android:id="@+id/text_explanation"
+            android:textSize="20dp"
+            android:text="Explanation :  "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/landmark_explanation_edit"
+            android:layout_toRightOf="@+id/text_explanation"
+            android:layout_below="@+id/landmark_name"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/pic_landmark_button"
+            android:layout_below="@+id/landmark_explanation_edit"
+            android:layout_margin="20dp"
+            android:src="@drawable/no_image"
+            android:scaleType="fitCenter"
+            android:onClick="pic_lb_clicked"/>
+
+    </RelativeLayout>
+
+    <!-- trash_bin setting-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/setting_trash"
+        android:layout_below="@id/toilet_add"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trash_name"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="NAME : "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/trash_name_edit"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/trash_name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trash_name"
+            android:id="@+id/text_explanation2"
+            android:textSize="20dp"
+            android:text="Explanation :  "
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/trash_explanation_edit"
+            android:layout_toRightOf="@+id/text_explanation2"
+            android:layout_below="@+id/trash_name"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/pic_trash_button"
+            android:layout_below="@+id/trash_explanation_edit"
+            android:layout_margin="20dp"
+            android:src="@drawable/no_image"
+            android:scaleType="fitCenter"
+            android:onClick="pic_trb_clicked"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:id="@+id/submit"
+        android:text="submit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:onClick="submit_clicked"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/submit"
+        android:layout_margin="20dp"
+        android:onClick="cancel_clicked"/>
+
+</RelativeLayout>
