@@ -1,0 +1,402 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:textColor="#BFFF0F0F"
+        android:text="Now your Adding a marker"
+        android:id="@+id/pattern"
+        android:visibility="gone"/>
+
+    <!-- center located spot for get the center loc -->
+    <View
+        android:layout_width="5dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:background="#00000000"
+        android:id="@+id/center"/>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:context="raydom.use_map.MapsActivity"/>
+
+    <ToggleButton
+        android:id="@+id/mGPS"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"/>
+
+    <ImageButton
+        android:id="@+id/m_menu"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="#00FFFFFF"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/final_menu"
+        android:onClick="menu_b_clicked" />
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:id="@+id/lay_menu"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/m_menu">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="700dp"
+            android:id="@+id/m_pop"
+            android:background="#4FFFFFFF"
+            android:layout_below="@+id/m_menu"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/toilet"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_margin="5dp"
+            android:onClick="toilet_b_clicked"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/final_toilet" />
+
+        <ImageView
+            android:id="@+id/toilet_effect"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_margin="5dp"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/boundary"/>
+
+        <ImageButton
+            android:id="@+id/wifi"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/toilet"
+            android:layout_margin="5dp"
+            android:onClick="wifi_b_clicked"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/final_wifi" />
+
+        <ImageView
+            android:id="@+id/wifi_effect"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/toilet"
+            android:layout_margin="5dp"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/boundary"/>
+
+        <ImageButton
+            android:id="@+id/smoking"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/wifi"
+            android:layout_margin="5dp"
+            android:onClick="smoking_b_clicked"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/final_smoking" />
+
+        <ImageView
+            android:id="@+id/smoking_effect"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/wifi"
+            android:layout_margin="5dp"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/boundary"/>
+
+        <ImageButton
+            android:id="@+id/land_mark"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/smoking"
+            android:layout_margin="5dp"
+            android:background="#00FFFFFF"
+            android:onClick="landmark_b_clicked"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/final_landmark"/>
+
+        <ImageView
+            android:id="@+id/land_mark_effect"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/smoking"
+            android:layout_margin="5dp"
+            android:background="#00000000"
+            android:padding="0sp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/boundary"/>
+
+        <ImageButton
+            android:id="@+id/personal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/land_mark"
+            android:layout_margin="5dp"
+            android:onClick="personal_b_clicked"
+            android:background="#00FFFFFF"
+            android:src="@drawable/final_personal"
+            android:padding="0sp"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/personal_effect"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/land_mark"
+            android:layout_margin="5dp"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/boundary"/>
+
+        <ImageButton
+            android:id = "@+id/setting"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/m_pop"
+            android:layout_below="@+id/personal"
+            android:background="#00FFFFFF"
+            android:layout_margin="5dp"
+            android:padding="0sp"
+            android:onClick="setting_clicked"
+            android:src="@drawable/final_setting"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/m_pop"
+            android:layout_margin="10dp"
+            android:onClick="add_b_clicked"
+            android:background="#00FFFFFF"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/final_add"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="460dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin = "20dp" >
+
+        <TextView
+            android:id="@+id/SearchEngine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/search_border" />
+
+        <EditText
+            android:id="@+id/Address"
+            android:layout_width="380dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="#FFFFFFFF"
+            android:maxLines="1"/>
+
+
+        <ImageButton
+            android:id="@+id/Search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="Search_clicked"
+            android:layout_margin="10dp"
+            android:background="#FF6CB6B9"
+            android:scaleType="fitXY"
+            android:src="@drawable/magnifier" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="200dp"
+        android:id="@+id/m_check2"
+        android:background="#FFFFFFFF"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/add_no"
+            android:onClick="add_ok_clicked"
+            android:text="Yes"
+            android:background="#FF006FFF"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:id="@+id/add_no"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="add_no_clicked"
+            android:text="No"
+            android:background="#FF006FFF"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11pt"
+            android:layout_alignTop="@+id/m_check2"
+            android:text="Do you want to add A Marker on this Location?"
+            android:layout_margin="20dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/m_ID"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:background="#2F006FFF"
+        android:text=""
+        android:layout_margin="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:id="@+id/mark_info"
+        android:background="#BAFFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/center"
+        android:visibility="gone">
+
+        <TextView
+            android:id = "@+id/edge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/image_border"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="250dp"
+            android:id="@+id/mark_image"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/detail"
+            android:background="#FF006FFF"
+            android:textSize="15dp"
+            android:textColor="#FFFFFFFF"
+            android:layout_below="@+id/mark_image"
+            android:text="More details"
+            android:layout_marginLeft="10dp"
+            android:onClick="detail_clicked"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mark_name_text"
+            android:textSize="16dp"
+            android:text="Name : "
+            android:layout_below="@+id/detail"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mark_name"
+            android:textSize="16dp"
+            android:layout_below="@+id/detail"
+            android:layout_toRightOf="@+id/mark_name_text"
+            android:layout_margin="10dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:src="@drawable/star_icon"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:onClick="personal_add_clicked"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id = "@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/image_border"/>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id = "@+id/webView"
+        android:visibility="gone" />
+
+</RelativeLayout>

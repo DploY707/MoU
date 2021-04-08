@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/id_edit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/pw_edit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/id_edit"
+        android:layout_centerInParent="true"
+        android:text="ID"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/pw_edit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_edit"
+        android:layout_centerInParent="true"
+        android:password="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PW"
+        android:layout_toLeftOf="@+id/pw_edit"
+        android:layout_below="@+id/id_edit"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/id_edit"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pw_edit"
+        android:layout_below="@+id/pw_edit"
+        android:onClick="guest_clicked"
+        android:text="guest" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pw_edit"
+        android:layout_below="@+id/pw_edit"
+        android:onClick="login_clicked"
+        android:text="Login" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_alignStart="@+id/button3"
+        android:layout_below="@+id/button3"
+        android:onClick="sign_clicked"
+        android:text="SIGN IN" />
+
+</RelativeLayout>
